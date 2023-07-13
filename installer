@@ -60,7 +60,7 @@ fi
 }
 cek(){
 while read list; do
-c=$(curl -s "${list}" -L | grep -oP '<label for="user_login">')
+c=$(curl -s "${list}" -L | grep -oP '<div id="login">')
 if [[ $c ]]; then
 echo -e " ${list}" >> hasil.txt
 echo -e " ${ijo}[${mrh}Found${ijo}]${nat} ${ijo}${list}"
